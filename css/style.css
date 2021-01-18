@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap");
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0; }
@@ -11,13 +12,13 @@ body {
 
 header {
   position: relative;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../img/JHD.jpg) no-repeat;
-  background-position: 45% 50%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(../img/hero.jpeg) no-repeat;
+  background-position: 50% 25px;
   background-size: cover;
-  height: 100vh; }
+  height: 700px; }
   header .header__border {
     height: 25px;
-    background-color: #000; }
+    background-color: #1a1a1a; }
   header nav {
     border-bottom: 1px solid #ffffff61;
     position: sticky;
@@ -26,20 +27,32 @@ header {
     width: 100%;
     color: #f0ebe8c7;
     background-color: rgba(0, 0, 0, 0);
-    transition: background-color 800ms ease-in-out; }
-    header nav .logo-text {
-      font-family: 'Dancing Script', cursive;
-      color: #fff;
-      margin: 4px 0;
-      text-align: center;
-      font-size: 20px; }
+    transition: background-color 400ms ease-in-out; }
     header nav .nav {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
       align-items: center;
-      padding: 10px 0;
-      font-size: 28px;
+      padding: 8px 0;
+      padding-bottom: 0;
       cursor: pointer; }
+      header nav .nav__icon, header nav .nav__search-icon {
+        padding-top: 28px; }
+      header nav .nav__icon {
+        font-size: 38px; }
       header nav .nav__logo {
-        width: 50px;
+        width: 58px;
         border-radius: 100%; }
+      header nav .nav__search-icon {
+        font-size: 26px; }
+      header nav .nav__icons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+      header nav .nav__text {
+        color: #eee9e6;
+        margin: 0 0 4px 0;
+        text-align: center;
+        font-size: 25px; }
+
+@media (min-width: 1200px) {
+  header {
+    background-position: 50% 5px; } }
