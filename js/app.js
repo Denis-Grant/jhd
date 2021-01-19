@@ -6,7 +6,9 @@ const logoTextLg = document.querySelector('li.nav__text');
 window.addEventListener('scroll', ()=>{
     if (window.pageYOffset > 25){
         // nav.style.transition = 'background-color 500ms ease-in-out';
-        nav.style.backgroundColor = '#1a1a1a';
+        nav.style.backgroundColor = '#0C0B0D';
+        // nav.style.backgroundColor = '#fff';
+
         nav.style.color = '#eee9e6';
         // navLogo.src = 'img/logo-sm-black.jpg';
         logoText.style.color ='#d2a56d';
