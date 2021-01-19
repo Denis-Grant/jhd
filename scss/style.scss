@@ -1,14 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
- $offwhite: #eee9e6;
- $black: #1a1a1a;
+// @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+$offwhite: #eee9e6;
+$black: #1a1a1a;
+$dark-grey: #67655fe0;
  body {
     font-family: 'Quicksand', sans-serif;
     margin: 0;
     .container {
         width: 90%;
         margin: 0 auto;
+    }
+    .border-circle {
+        position: relative;
+        text-align: center;
+
+        i {
+        position: absolute;
+        top: -30px;
+        font-size: 24px;
+        color: $black;
+        background-color: #fff;
+        padding: 12px 14px;
+        border-radius: 100%;
+        box-shadow: 1px 9px 16px -6px rgba(61,61,61,0.85);
+        }
+        .hide {
+            display: none;
+        }
     }
     .gap {
         height: 600px;
@@ -17,23 +36,23 @@
 
 header {
     position: relative;
-    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.1)),url(../img/hero.jpeg) no-repeat;
-    background-position: 50% 25px;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.1)),url(../img/hero-img.jpg) no-repeat;
+    background-position: 48% 25px;
     background-size: cover;
     height: 700px;
     .header__border {
         height: 25px;
-        background-color: $black;
+        background-color: $dark-grey;
     }
     nav {
-       border-bottom: 1px solid #ffffff61;
+       border-bottom: 1px solid #ffffff1f;
         position: sticky;
         top: 0;
         left: 0;
         width: 100%;
         color: #f0ebe8c7;
         background-color: rgba(0,0,0,0);
-        transition: background-color 400ms ease-in-out;
+        transition: background-color 500ms ease-in-out;
         .logo-text {
            
         }
@@ -47,11 +66,12 @@ header {
                 padding-top: 28px;
             }
             &__icon {
-                font-size: 38px;
+                font-size: 32px;
             }
             &__logo {
-                width: 58px;
+                width: 50px;
                 border-radius: 100%;
+                transition: width 300ms ease;
             }
             &__search-icon { 
                 font-size: 26px;
@@ -62,15 +82,34 @@ header {
                 align-items: center;
             }
             &__text {
-                // font-family: 'Dancing Script', cursive;
+                font-family: 'Great Vibes', cursive;
                 color: $offwhite;
-                margin: 0 0 4px 0;
+                margin: 4px 0 8px 0;
                 text-align: center;
-                font-size: 25px;
+                transition: font-size 300ms ease;
+                // letter-spacing: 2px;
+                font-size: 26px;
+            }
+            &__menu {
+                display: none;
+                justify-content: space-between;
+                list-style: none;
+                li {
+                    a {
+                        display: inline-block;
+                        color: inherit;
+                        text-decoration: none;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        font-weight: 300;
+                    }
+                }
             }
         }
-    }
+
+    } /* nav */
 }
+
 
 
 
@@ -81,18 +120,33 @@ header {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {  
+    header nav .nav {
+        &__logo {
+            width: 75px;
+            border-radius: 100%;
+        }
+        &__text {
+            font-size: 36px;
+        }
+    }
+} /* nav */
 
-}
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {  
-
+    header nav .nav{
+        &__icons, &__search-icon {
+            display: none;
+        }
+        &__menu {
+            display: flex;
+        }
+                
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {  
-    header {
-        background-position: 50% 5px;
-    }
+   
 
 }
