@@ -73,7 +73,7 @@ $dark-grey: #67655fe0;
             display: grid;
             align-items: center;
             padding:8px 0;
-            padding-bottom: 0;
+            padding-bottom: 4px;
             cursor: pointer;
             &__icon, &__search-icon {
                 // padding-top: 28px;
@@ -107,9 +107,9 @@ $dark-grey: #67655fe0;
                 li {
                     a {
                         display: inline-block;
-                        color: inherit;
+                        color: $offwhite;
                         text-decoration: none;
-                        font-size: 14px;
+                        font-size: 12px;
                         letter-spacing: 2px;
                         font-weight: 300;
                     }
@@ -120,13 +120,12 @@ $dark-grey: #67655fe0;
     } /* nav */
     &__cta {
         padding-top: 30px;
-        align-items: center;
         line-height: 28px;
         margin: auto 0;
         color: #fff;
         h1 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 35px;
+            font-size: 38px;
             line-height: 33px;
             span.border {
                 padding: 2px 2px;
@@ -144,7 +143,12 @@ $dark-grey: #67655fe0;
 
 
 @media (min-width: 576px) {  
-
+    .header__cta {
+        h1 {
+            font-size: 42px;
+            line-height: 33px;
+        }
+    }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -158,7 +162,13 @@ $dark-grey: #67655fe0;
             font-size: 36px;
         }
     }
-} /* nav */
+    .header__cta {
+        h1 {
+            font-size: 48px;
+            line-height: 38px;
+        }
+    }
+} 
 
 
 // Large devices (desktops, 992px and up)
@@ -169,13 +179,23 @@ $dark-grey: #67655fe0;
         }
         &__menu {
             display: flex;
+        }           
+    }
+    .header__cta {
+        h1 {
+            font-size: 62px;
+            line-height: 50px;
         }
-                
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {  
-   
+    .header__cta {
+        h1 {
+            font-size: 72px;
+            line-height: 58px;
+        }
+    }
 
 }
