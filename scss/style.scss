@@ -389,8 +389,50 @@ $primary: rgb(210, 165, 109);
     padding-top: 70px;
     border-top: 1px solid $primary;
     .care {
-       
-    }    
+       .tips {
+           font-family: Montserrat, sans-serif;
+           text-align: center;
+           &__answers {
+            h3 {
+                font-weight: bold;
+                color: $black;
+                span {
+                    color: $primary;
+                }
+            }    
+            p {
+                    font-weight: 300;
+                    font-size: 14px;
+                    margin-bottom: 40px;
+                    line-height: 26px;
+                }
+           }
+           &__btns {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                
+                span {
+                    padding: 12px 18px;
+                    margin-bottom: 20px;
+                    color: $primary;
+                    font-weight: bold;
+                    background-color: $black;
+                    font-size: 17px;
+                    border-radius: 100%;
+                    cursor: pointer;
+                    display: inline-block;
+                    transform: scale(1);
+                    transition: transform 900ms  ease-in-out;
+                    &:hover {
+                        transform: scale(1.1);
+                        // background-color: lighten($black, 20%);
+                        border: 3px solid $primary;
+                        margin-top: -6px;
+                    }
+                }
+            }
+        }    
+    }
 }
 
 

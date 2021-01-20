@@ -289,6 +289,38 @@ body {
 #care {
   padding-top: 70px;
   border-top: 1px solid #d2a56d; }
+  #care .care .tips {
+    font-family: Montserrat, sans-serif;
+    text-align: center; }
+    #care .care .tips__answers h3 {
+      font-weight: bold;
+      color: #1a1a1a; }
+      #care .care .tips__answers h3 span {
+        color: #d2a56d; }
+    #care .care .tips__answers p {
+      font-weight: 300;
+      font-size: 14px;
+      margin-bottom: 40px;
+      line-height: 26px; }
+    #care .care .tips__btns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); }
+      #care .care .tips__btns span {
+        padding: 12px 18px;
+        margin-bottom: 20px;
+        color: #d2a56d;
+        font-weight: bold;
+        background-color: #1a1a1a;
+        font-size: 17px;
+        border-radius: 100%;
+        cursor: pointer;
+        display: inline-block;
+        transform: scale(1);
+        transition: transform 900ms  ease-in-out; }
+        #care .care .tips__btns span:hover {
+          transform: scale(1.1);
+          border: 3px solid #d2a56d;
+          margin-top: -6px; }
 
 @media (min-width: 576px) {
   .header__cta h1 {
