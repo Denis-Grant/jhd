@@ -30,8 +30,9 @@ $primary: rgb(210, 165, 109);
         border-radius: 100%;
         box-shadow: 1px 9px 16px -6px rgba(61,61,61,0.85);
         }
-        .hide {
-            display: none;
+    
+        .show {
+            display: block;
         }
     }
     
@@ -386,31 +387,45 @@ $primary: rgb(210, 165, 109);
     }
 }
 #care {
-    padding-top: 70px;
-    border-top: 1px solid $primary;
+    padding-top: 40px;
+    border-top: 1px solid #d2a56d42;
+    .border-circle {
+        top: -40px;
+    }
     .care {
-       .tips {
+        .tips {
            font-family: Montserrat, sans-serif;
            text-align: center;
            &__answers {
-            h3 {
-                font-weight: bold;
-                color: $black;
-                span {
-                    color: $primary;
+               .tip {
+                    p {
+                        font-weight: 300;
+                        font-size: 14px;
+                        margin-bottom: 40px;
+                        line-height: 26px;
+                        width: 100%;
+                        margin: 0 auto;
+                    }
                 }
-            }    
-            p {
-                    font-weight: 300;
-                    font-size: 14px;
-                    margin-bottom: 40px;
-                    line-height: 26px;
+                .hide {
+                display: none;
                 }
+                .show {
+                    display: block;
+                }
+                h3 {
+                    font-weight: bold;
+                    color: $black;
+                    span {
+                        color: $primary;
+                    }
+                }    
+           
            }
            &__btns {
                 display: grid;
                 grid-template-columns: repeat(3,1fr);
-                
+                margin-top: 30px;
                 span {
                     padding: 12px 18px;
                     margin-bottom: 20px;
@@ -468,6 +483,15 @@ $primary: rgb(210, 165, 109);
             display: block;
         }
     }
+    #care .care .tips__answers .tip p {
+                font-weight: 300;
+                font-size: 14px;
+                margin-bottom: 40px;
+                line-height: 26px;
+                width:70%;
+                margin: 0 auto;
+            }
+    
 }
 
 // Medium devices (tablets, 768px and up)
@@ -486,6 +510,11 @@ $primary: rgb(210, 165, 109);
             font-size: 48px;
             line-height: 38px;
         }
+    }
+    #care .care .tips__btns {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin-top: 30px;
     }
 } 
 

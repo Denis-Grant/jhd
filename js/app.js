@@ -28,6 +28,22 @@ window.addEventListener('scroll', ()=>{
     }
 });
 
+const tipsAnswers = document.querySelectorAll('.tips__answers');
+const tipsBtns = document.querySelector('.tips__btns');
+
+tipsBtns.addEventListener('click',(e)=>{
+    
+    if (!isNaN(e.target.innerHTML) ){
+        for(i = 0; i < tipsAnswers[0].childElementCount; i++) {
+            tipsAnswers[0].children[i].classList.remove('show');
+            tipsAnswers[0].children[i].classList.add('hide');
+        }   
+        tipsAnswers[0].children[e.target.innerHTML - 1].classList.add('show');
+    }
+    
+});
+
+
 const navIcon = document.querySelector('.nav__icon');   
 const mobileMenu = document.querySelector('.mobile__menu');
 let menuOpen = false;
@@ -40,3 +56,8 @@ let menuOpen = false;
 //         menuOpen = false;
 //     }
 // });
+
+
+
+
+// tipsAnswers[0].children[1].classList.value.includes('show')
