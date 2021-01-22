@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0; }
@@ -338,26 +341,31 @@ body {
           margin-top: -6px; }
 
 #gallery {
-  position: relative;
-  padding-top: 40px; }
-  #gallery .modal__img {
-    position: absolute;
-    color: red;
-    left: 0%;
-    top: 10%;
-    z-index: 10;
-    max-width: 600px; }
-    #gallery .modal__img img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      border: 3px solid #d2a56d; }
+  padding-top: 40px;
+  padding-bottom: 80px;
+  border-bottom: 1px solid #d2a56d59;
+  box-shadow: 0px 4px 16px -11px; }
+  #gallery .modal {
+    grid-column: 1 / span 2; }
+    #gallery .modal__img {
+      color: red;
+      left: 10%;
+      top: 10%;
+      z-index: 10;
+      max-width: 600px; }
+      #gallery .modal__img img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: 3px solid #d2a56d; }
 
 .gallery {
+  position: relative;
   display: grid;
   justify-content: center; }
   .gallery__container {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr;
     gap: 3px;
@@ -374,7 +382,7 @@ body {
       display: none; }
   .gallery .overlay {
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     top: 0;
@@ -388,6 +396,9 @@ body {
       background-color: #d2a56d94;
       cursor: pointer;
       color: #eee9e6; }
+  .gallery #gallery-end {
+    position: relative;
+    margin-top: 50px; }
 
 @media (min-width: 576px) {
   .header__cta h1 {
@@ -418,6 +429,8 @@ body {
     line-height: 26px;
     width: 70%;
     margin: 0 auto; }
+  .gallery .overlay {
+    display: flex; }
   .gallery__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -447,7 +460,6 @@ body {
   #gallery__img {
     position: absolute;
     color: red;
-    left: 10%;
     top: 10%;
     z-index: 10;
     max-width: 600px; }
@@ -476,7 +488,21 @@ body {
       width: 100%;
       object-fit: cover;
       height: 100%;
-      display: block; } }
+      display: block; }
+  #gallery .modal {
+    grid-column: 2 / span 2; }
+    #gallery .modal__img {
+      color: red;
+      left: 10%;
+      top: 10%;
+      z-index: 10;
+      max-width: 600px; }
+      #gallery .modal__img img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border: 3px solid #d2a56d; } }
 
 @media (min-width: 1200px) {
   .header__cta h1 {

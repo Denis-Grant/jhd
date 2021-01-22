@@ -70,6 +70,7 @@ const modalImg = document.querySelector('.modal__img');
 const galleryImgs = document.querySelector('.gallery__container');
 const zoomBtn = document.querySelector('.zoom-btn');
 
+const galleryStart = document.querySelector('#gallery-start');
 
 galleryImgs.addEventListener('click', (e)=>{
     let imgSrc;
@@ -80,9 +81,13 @@ galleryImgs.addEventListener('click', (e)=>{
     }
     modal.classList.toggle('off');
     modalImg.innerHTML = imgSrc;
-    window.location.href = '#gallery';
+    // window.location.href = '#gallery-end';
+    window.scrollTo(0, window.pageYOffset + 600);
 });
 
 modalImg.addEventListener('mouseleave', ()=>{
     modal.classList.toggle('off');
+    // window.location.href = '#gallery-start';
+    window.scrollTo(0, window.pageYOffset - 500);
+
 });
