@@ -64,3 +64,25 @@ let menuOpen = false;
 
 
 // tipsAnswers[0].children[1].classList.value.includes('show')
+const gallery = document.querySelector('#gallery');
+const modal = document.querySelector('.modal');
+const modalImg = document.querySelector('.modal__img');
+const galleryImgs = document.querySelector('.gallery__container');
+const zoomBtn = document.querySelector('.zoom-btn');
+
+
+galleryImgs.addEventListener('click', (e)=>{
+    let imgSrc;
+    if (e.target.classList[0] != 'zoom-btn') {
+        imgSrc = `<img src="${e.target.previousElementSibling.getAttribute('src')}" alt="">`;
+    } else {
+        imgSrc = `<img src="${e.target.parentElement.parentElement.children[0].getAttribute('src')}" alt="">`
+    }
+    modal.classList.toggle('off');
+    modalImg.innerHTML = imgSrc;
+    window.location.href = '#gallery';
+});
+
+modalImg.addEventListener('mouseleave', ()=>{
+    modal.classList.toggle('off');
+});

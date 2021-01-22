@@ -21,6 +21,8 @@ body {
       box-shadow: 1px 9px 16px -6px rgba(61, 61, 61, 0.85); }
     body .border-circle .show {
       display: block; }
+  body .off {
+    display: none; }
   body .para__center {
     display: flex;
     flex-direction: column;
@@ -51,7 +53,7 @@ body {
   .header nav {
     border-bottom: 1px solid #ffffff1f;
     position: sticky;
-    z-index: 10;
+    z-index: 50;
     top: 0;
     left: 0;
     width: 100%;
@@ -335,15 +337,33 @@ body {
           border: 3px solid #d2a56d;
           margin-top: -6px; }
 
+#gallery {
+  position: relative;
+  padding-top: 40px; }
+  #gallery .modal__img {
+    position: absolute;
+    color: red;
+    left: 0%;
+    top: 10%;
+    z-index: 10;
+    max-width: 600px; }
+    #gallery .modal__img img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border: 3px solid #d2a56d; }
+
 .gallery {
   display: grid;
   justify-content: center; }
   .gallery__container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 5px;
+    gap: 3px;
     margin-top: 70px; }
     .gallery__container .gallery__img {
+      position: relative;
       max-width: 350px; }
       .gallery__container .gallery__img img {
         width: 100%;
@@ -352,6 +372,22 @@ body {
         display: block; }
     .gallery__container .middle {
       display: none; }
+  .gallery .overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0);
+    background-color: #d2a56d00;
+    transition: background-color 500ms ease-in-out, color 500ms ease-in-out; }
+    .gallery .overlay:hover {
+      background-color: #d2a56d94;
+      cursor: pointer;
+      color: #eee9e6; }
 
 @media (min-width: 576px) {
   .header__cta h1 {
@@ -386,20 +422,13 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
-    gap: 5px;
+    gap: 2px;
     margin-top: 70px; }
     .gallery__container .gallery__img img {
       width: 100%;
       object-fit: cover;
       height: 100%;
-      display: block; }
-    .gallery__container .middle {
-      display: block;
-      grid-column: 1 / span 2;
-      max-width: 690px;
-      height: auto;
-      justify-self: center;
-      border: 2px solid #d2a56d; } }
+      display: block; } }
 
 @media (min-width: 768px) {
   .header nav .nav__logo {
@@ -412,8 +441,22 @@ body {
     line-height: 38px; }
   #care .care .tips__btns {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    margin-top: 30px; } }
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+    padding-bottom: 30px; }
+  #gallery__img {
+    position: absolute;
+    color: red;
+    left: 10%;
+    top: 10%;
+    z-index: 10;
+    max-width: 600px; }
+    #gallery__img img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border: 3px solid #d2a56d; } }
 
 @media (min-width: 992px) {
   .header nav .nav__icons, .header nav .nav__search-icon {
@@ -422,7 +465,18 @@ body {
     display: flex; }
   .header__cta h1 {
     font-size: 62px;
-    line-height: 50px; } }
+    line-height: 50px; }
+  .gallery__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 2px;
+    margin-top: 70px; }
+    .gallery__container .gallery__img img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      display: block; } }
 
 @media (min-width: 1200px) {
   .header__cta h1 {
