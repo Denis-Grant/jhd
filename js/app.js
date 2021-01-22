@@ -39,8 +39,11 @@ tipsBtns.addEventListener('click',(e)=>{
             tipsAnswers[0].children[i].classList.add('hide');
         }   
         tipsAnswers[0].children[e.target.innerHTML - 1].classList.add('show');
+        // tipsAnswers[0].children[e.target.innerHTML - 1].children[0].style.display = 'block';
+        // tipsAnswers[0].children[e.target.innerHTML - 1].children[1].style.color = 'black';
+        // tipsAnswers[0].children[e.target.innerHTML - 1].children[1].style.lineHeight = '26px';
     }
-    
+   
 });
 
 

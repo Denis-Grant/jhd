@@ -203,8 +203,7 @@ body {
   align-items: center;
   margin-top: 70px;
   background-color: #eee9e6;
-  -webkit-box-shadow: 0px 7px 15px -2px rgba(0, 0, 0, 0.64);
-  box-shadow: 0px 7px 15px -2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 4px 16px -11px;
   padding: 5px; }
   .branding__logo {
     border-radius: 100%;
@@ -215,8 +214,6 @@ body {
   .branding__kera, .branding__miz, .branding__ghd {
     width: 100px;
     height: 100%; }
-  .branding__kera {
-    color: #1a1a1a; }
   .branding__miz {
     display: none; }
   .branding__ghd {
@@ -226,6 +223,7 @@ body {
 .services {
   font-family: Lato, sans-serif;
   padding-top: 50px;
+  padding-bottom: 20px;
   margin-bottom: 70px; }
   .services__text {
     font-family: Lato, sans-serif;
@@ -288,7 +286,8 @@ body {
 
 #care {
   padding-top: 40px;
-  border-top: 1px solid #d2a56d42; }
+  border-top: 1px solid #d2a56d42;
+  box-shadow: 0px 0px 17px -11px; }
   #care .border-circle {
     top: -40px; }
   #care .care .tips {
@@ -300,7 +299,9 @@ body {
       margin-bottom: 40px;
       line-height: 26px;
       width: 100%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      color: #1a1a1a;
+      transition: line-height 500ms ease-in; }
     #care .care .tips__answers .hide {
       display: none; }
     #care .care .tips__answers .show {
@@ -315,7 +316,10 @@ body {
       grid-template-columns: repeat(3, 1fr);
       margin-top: 30px; }
       #care .care .tips__btns span {
-        padding: 12px 18px;
+        line-height: 2;
+        padding: 5px 5px 5px 5px;
+        width: 35px;
+        height: 35px;
         margin-bottom: 20px;
         color: #d2a56d;
         font-weight: bold;
@@ -330,6 +334,24 @@ body {
           transform: scale(1.1);
           border: 3px solid #d2a56d;
           margin-top: -6px; }
+
+.gallery {
+  display: grid;
+  justify-content: center; }
+  .gallery__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    margin-top: 70px; }
+    .gallery__container .gallery__img {
+      max-width: 350px; }
+      .gallery__container .gallery__img img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        display: block; }
+    .gallery__container .middle {
+      display: none; }
 
 @media (min-width: 576px) {
   .header__cta h1 {
@@ -351,13 +373,33 @@ body {
         object-fit: cover; }
   .branding__miz, .branding__ghd {
     display: block; }
+  .branding__kera img {
+    color: #1a1a1a; }
   #care .care .tips__answers .tip p {
     font-weight: 300;
     font-size: 14px;
     margin-bottom: 40px;
     line-height: 26px;
     width: 70%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .gallery__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 70px; }
+    .gallery__container .gallery__img img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      display: block; }
+    .gallery__container .middle {
+      display: block;
+      grid-column: 1 / span 2;
+      max-width: 690px;
+      height: auto;
+      justify-self: center;
+      border: 2px solid #d2a56d; } }
 
 @media (min-width: 768px) {
   .header nav .nav__logo {
