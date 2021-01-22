@@ -91,3 +91,8 @@ modalImg.addEventListener('mouseleave', ()=>{
     window.scrollTo(0, window.pageYOffset - 500);
 
 });
+let on = true;
+const video = document.getElementById('video');
+setInterval(()=>{
+    video.play();
+}, 15000);
