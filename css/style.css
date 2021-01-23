@@ -402,7 +402,6 @@ body {
 
 #contact {
   padding-top: 40px;
-  overflow-x: hidden;
   margin-bottom: 70px; }
   #contact .contact {
     width: 80%;
@@ -410,19 +409,17 @@ body {
     #contact .contact .contact-container {
       font-family: 'Montserrat', sans-serif;
       display: grid;
-      grid-template-columns: 50% 50%;
       border: 5px solid #eee9e6; }
     #contact .contact__video #video {
-      position: relative;
-      max-width: 100%;
+      width: 100%;
       display: block;
       opacity: .8;
-      min-height: 342px;
-      object-fit: cover; }
+      height: auto;
+      object-fit: contain; }
     #contact .contact__form {
       max-width: 100%;
       background-color: #f5f5f5;
-      padding-top: 15px; }
+      padding: 20px 15px; }
       #contact .contact__form .form input, #contact .contact__form .form select, #contact .contact__form .form textarea {
         margin-bottom: 15px;
         border: 1px solid #d2a56d;
@@ -437,15 +434,17 @@ body {
         padding: 6px 9px; }
     #contact .contact__info {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: space-between;
       background-color: #d4af37;
-      color: #1a1a1acf;
-      grid-column: 1 / span 2;
-      font-weight: bold;
       padding: 7px 0; }
+      #contact .contact__info .row {
+        padding: 0 12px;
+        display: inline; }
       #contact .contact__info i {
         font-size: 25px;
-        padding: 5px 10px; }
+        padding: 5px 5px; }
       #contact .contact__info .text {
         padding-right: 20px; }
 
@@ -457,15 +456,18 @@ footer {
   footer .footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-around; }
+    justify-content: space-around;
+    font-size: 13px; }
     footer .footer .contact__info {
       display: flex;
       flex-direction: column; }
-    footer .footer img {
+    footer .footer .contact__info {
+      justify-self: center; }
+    footer .footer img, footer .footer .contact__info, footer .footer .nav__menu {
       justify-self: center;
       align-self: center; }
-  footer a {
-    color: #d2a56d; }
+    footer .footer a {
+      color: #d2a56d; }
 
 @media (min-width: 576px) {
   .header__cta h1 {
@@ -569,7 +571,22 @@ footer {
         width: 100%;
         height: auto;
         object-fit: cover;
-        border: 3px solid #d2a56d; } }
+        border: 3px solid #d2a56d; }
+  #contact .contact .contact-container {
+    grid-template-columns: 1fr 1fr; }
+    #contact .contact .contact-container .contact__info {
+      grid-column: 2 / span 1; }
+    #contact .contact .contact-container .contact__video {
+      height: 100%;
+      grid-row: 1 / span 2; }
+      #contact .contact .contact-container .contact__video #video {
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: .8;
+        object-fit: cover;
+        object-fit: cover;
+        display: block; } }
 
 @media (min-width: 1200px) {
   .header__cta h1 {
@@ -582,7 +599,3 @@ footer {
     .about__img {
       object-fit: cover;
       height: 100%; } }
-
-@media (max-width: 1200px) {
-  #contact .contact .contact-container {
-    grid-template-columns: 600px; } }
